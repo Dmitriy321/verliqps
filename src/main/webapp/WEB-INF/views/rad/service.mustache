@@ -1,0 +1,33 @@
+
+///////////////////////////////////////////////////////////////////
+
+package ru.verlioka.cmf.appservices.services.concrete.{{model_class}};
+
+import ru.verlioka.cmf.core.services.generic.db.IGenericService;
+import ru.verlioka.cmf.appservices.models.{{model_class}};
+
+public interface {{model_class}}Service extends IGenericService<{{model_class}}, Long> {
+}
+
+///////////////////////////////////////////////////////////////////
+
+package ru.verlioka.cmf.appservices.services.concrete.{{model_class}};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ru.verlioka.cmf.core.services.generic.db.GenericServiceImpl;
+import ru.verlioka.cmf.appservices.dao.concrete.{{model_class}}Dao;
+import ru.verlioka.cmf.appservices.models.{{model_class}};
+
+@Service("{{model_class}}ServiceImpl")
+public class {{model_class}}ServiceImpl extends GenericServiceImpl<{{model_class}}, Long> implements {{model_class}}Service {
+
+    public {{model_class}}ServiceImpl() {
+    }
+
+    @Autowired
+    public {{model_class}}ServiceImpl({{model_class}}Dao genericDao) {
+        super(genericDao);
+    }
+}

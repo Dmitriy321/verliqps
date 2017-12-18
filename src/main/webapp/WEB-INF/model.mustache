@@ -1,0 +1,24 @@
+
+///////////////////////////////////////////////////////////////////
+
+package ru.verlioka.cmf.appservices.models;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "{{table_name}}")
+public class {{model_class}} {
+
+	{{#fields}}
+		private {{type}} {{name}};
+	{{/fields}}
+	
+	{{#fields}}
+		public {{type}} get{{name}} {
+			return this.{{name}};
+		}
+		public void set{{name}} {
+			return {{name}};
+		}
+	{{/fields}}
+}

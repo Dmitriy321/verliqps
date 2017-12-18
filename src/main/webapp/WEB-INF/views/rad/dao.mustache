@@ -1,0 +1,24 @@
+
+//////////////////////////////////////////////////////////////////////
+
+package ru.verlioka.cmf.appservices.dao.concrete;
+
+import ru.verlioka.cmf.core.dao.generic.IGenericDao;
+import ru.verlioka.cmf.appservices.models.{{model_class}};
+
+public interface {{model_class}}Dao extends IGenericDao<{{model_class}}, Long> {
+}
+
+//////////////////////////////////////////////////////////////////////
+
+package ru.verlioka.cmf.appservices.dao.concrete;
+
+import org.springframework.stereotype.Repository;
+import ru.verlioka.cmf.core.dao.generic.GenericDaoImpl;
+import ru.verlioka.cmf.appservices.models.{{model_class}};
+
+
+@Repository("{{model_class}}DaoImpl")
+public class {{model_class}}DaoImpl extends GenericDaoImpl<{{model_class}}, Long>
+        implements {{model_class}}Dao {
+}
